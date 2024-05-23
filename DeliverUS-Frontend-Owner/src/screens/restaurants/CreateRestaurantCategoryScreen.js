@@ -31,7 +31,7 @@ export default function CreateRestaurantScreen ({ navigation }) {
         style: GlobalStyles.flashStyle,
         titleStyle: GlobalStyles.flashTextStyle
       })
-      navigation.navigate('CreateRestaurantsScreen', { dirty: true })
+      navigation.navigate('CreateRestaurantScreen', { dirty: true })
     } catch (error) {
       console.log(error)
       setBackendErrors(error.errors)

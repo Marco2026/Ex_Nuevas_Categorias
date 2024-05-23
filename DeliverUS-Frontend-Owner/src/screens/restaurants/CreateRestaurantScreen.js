@@ -77,7 +77,7 @@ export default function CreateRestaurantScreen ({ navigation }) {
       }
     }
     fetchRestaurantCategories()
-  }, [])
+  }, [restaurantCategories])
 
   useEffect(() => {
     (async () => {
@@ -179,7 +179,7 @@ export default function CreateRestaurantScreen ({ navigation }) {
               <ErrorMessage name={'restaurantCategoryId'} render={msg => <TextError>{msg}</TextError> }/>
 
               <Pressable
-                onPress={(item) => navigation.navigate('CreateRestaurantCategoryScreen', { id: item.id })}
+                onPress={() => navigation.navigate('CreateRestaurantCategoryScreen')}
                 style={({ pressed }) => [
                   {
                     backgroundColor: pressed
